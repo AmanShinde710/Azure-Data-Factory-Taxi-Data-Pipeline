@@ -13,8 +13,6 @@ The project architecture is designed to handle large volumes of data and consist
 * **Azure Data Factory (ADF):** Orchestrates the data pipeline, including data ingestion, transformation, and loading.
 * **Azure SQL Database:** Serves as the relational data warehouse for storing the structured, processed data, enabling efficient querying and analysis.
 
-*(Replace "Replace_with_your_architecture_image_link.png" with an image of your architecture if possible.)*
-
 ## 🛠Technologies Used
 
 * **Azure Data Lake Storage(ADLS) Gen2:**
@@ -49,15 +47,16 @@ In this project, I:
 * Created SQL scripts for data normalization, type conversion, and data enrichment.
 * Loaded the transformed data into Azure SQL Database table, optimizing for query performance.
 * Implemented data validation and quality checks within the pipeline to ensure data accuracy.
+* Automated the data pipeline using ADF triggers and scheduling, ensuring continuous and reliable data processing.
 * Optimized the pipeline for performance and scalability to handle large datasets.
 * Designed and created the table within the Azure SQL database.
 * Created linked services, datasets, and pipelines within the Azure Data Factory.
-* Created data flows within the Azure Data Factory to transform the data.
+
 
 ## Sample SQL Queries
 
+Query to find the average trip distance by pickup location.
 ```sql
--- Query to find the average trip distance by pickup location
 SELECT
     pickup_zipcode,
     AVG(trip_distance) AS average_distance
@@ -67,8 +66,9 @@ GROUP BY
     pickup_zipcode
 ORDER BY
     average_distance DESC;
-
--- Query to find the total number of trips per month
+```
+Query to find the total number of trips per month.
+```sql
 SELECT
     DATEPART(year, pickup_datetime) AS trip_year,
     DATEPART(month, pickup_datetime) AS trip_month,
@@ -79,8 +79,9 @@ GROUP BY
     DATEPART(year, pickup_datetime), DATEPART(month, pickup_datetime)
 ORDER BY
     trip_year, trip_month;
-
---Query to find the top 10 most expensive average trip fares per dropoff location.
+```
+Query to find the top 10 most expensive average trip fares per dropoff location.
+```sql
 SELECT top 10
     dropoff_zipcode,
     AVG(fare_amount) AS average_fare
