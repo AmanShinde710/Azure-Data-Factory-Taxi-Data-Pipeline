@@ -4,7 +4,7 @@
 
 This project demonstrates the creation of an end-to-end data pipeline on Microsoft Azure to process and analyze NYC Taxi trip data. It focuses on ingesting raw data, transforming it into a structured format, and loading it into a data warehouse for analytical purposes. This pipeline showcases the power of Azure's data services for building scalable and reliable data solutions.
 
-## 👷🏼‍♂️Architecture
+## 👷🏼‍♂️Architecture:
 
 The project architecture is designed to handle large volumes of data and consists of the following components:
 
@@ -13,13 +13,13 @@ The project architecture is designed to handle large volumes of data and consist
 * **Azure Data Factory (ADF):** Orchestrates the data pipeline, including data ingestion, transformation, and loading.
 * **Azure SQL Database:** Serves as the relational data warehouse for storing the structured, processed data, enabling efficient querying and analysis.
 
-## 🛠Technologies Used
+## 🛠Technologies Used:
 
 * **Azure Data Lake Storage(ADLS) Gen2:**
 * **Azure Data Factory (ADF):**
 * **Azure SQL Database:**
 
-## 💻Setup and Execution
+## 💻Setup and Execution:
 
 1.  **Azure Resource Setup:**
     * Provision Azure Storage account and Data Lake Storage.
@@ -38,7 +38,7 @@ The project architecture is designed to handle large volumes of data and consist
     * Run SQL queries in Azure SQL Database.
 
 
-## 🔀Data Flow
+## 🔀DataFlow
 
 In this project, I:
 
@@ -51,6 +51,15 @@ In this project, I:
 * Optimized the pipeline for performance and scalability to handle large datasets.
 * Designed and created the table within the Azure SQL database.
 * Created linked services, datasets, and pipelines within the Azure Data Factory.
+
+## 🔑Key Takeaways:
+This project significantly enhanced my skills in:
+* Handling API data ingestion.
+* Designing and implementing end-to-end cloud-based data pipeline.
+* Working with large datasets and optimizing for performance.
+* Automate the data pipeline using ADF triggers.
+* Building relational data warehouses using Azure SQL DB. 
+* The use and implementation of ADLS Gen2. 
 
 
 ## Sample SQL Queries
@@ -92,4 +101,6 @@ GROUP BY
 ORDER BY
     average_fare DESC;
 ```
+
+This project was a challenging yet rewarding experience, demonstrating the power of Azure cloud services for building scalable data solutions.
 
